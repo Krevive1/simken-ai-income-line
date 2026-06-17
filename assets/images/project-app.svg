@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#eef3f8"/>
+  <rect x="386" y="70" width="188" height="400" rx="28" fill="#101827"/>
+  <rect x="408" y="112" width="144" height="300" rx="10" fill="#ffffff"/>
+  <path d="M432 332h96" stroke="#f59f18" stroke-width="12" stroke-linecap="round"/>
+  <path d="M432 170h96M432 206h70M432 242h110" stroke="#ccd7e5" stroke-width="12" stroke-linecap="round"/>
+  <text x="60" y="95" fill="#101827" font-family="Arial, sans-serif" font-size="34" font-weight="700">iPhone App</text>
+</svg>

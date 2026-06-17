@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#eef3f8"/>
+  <g fill="#fff" stroke="#ccd7e5" stroke-width="4">
+    <rect x="126" y="214" width="172" height="96" rx="12"/>
+    <rect x="394" y="214" width="172" height="96" rx="12"/>
+    <rect x="662" y="214" width="172" height="96" rx="12"/>
+  </g>
+  <path d="M298 262h96M566 262h96" stroke="#f59f18" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="212" cy="262" r="22" fill="#101827"/>
+  <circle cx="480" cy="262" r="22" fill="#101827"/>
+  <circle cx="748" cy="262" r="22" fill="#101827"/>
+  <text x="110" y="122" fill="#101827" font-family="Arial, sans-serif" font-size="34" font-weight="700">n8n Automation</text>
+</svg>

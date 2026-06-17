@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simken-ai-income-line.pages.dev/sitemap.xml

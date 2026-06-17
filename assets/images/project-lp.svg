@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="110" y="82" width="740" height="376" rx="12" fill="#101827"/>
+  <rect x="144" y="122" width="310" height="236" rx="8" fill="#fff"/>
+  <rect x="494" y="122" width="316" height="72" rx="8" fill="#f59f18"/>
+  <rect x="494" y="220" width="220" height="18" rx="9" fill="#dbe1ea"/>
+  <rect x="494" y="258" width="270" height="18" rx="9" fill="#dbe1ea"/>
+  <rect x="494" y="318" width="130" height="46" rx="8" fill="#fff"/>
+  <text x="160" y="392" fill="#fff" font-family="Arial, sans-serif" font-size="30" font-weight="700">Restaurant LP</text>
+</svg>
