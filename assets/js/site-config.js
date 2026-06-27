@@ -1,6 +1,6 @@
 const SITE_URL = "https://simken-ai-income-line.pages.dev";
-const CONTACT_FORM_URL = "REPLACE_WITH_GOOGLE_FORM_URL";
-const X_URL = "";
+const CONTACT_FORM_URL = "";
+const X_URL = "https://x.com/cimaciwc";
 
 const SIMKEN_CONFIG = {
   authorName: "SIMけん",

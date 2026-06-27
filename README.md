@@ -24,14 +24,14 @@
 python3 -m http.server 8080
 ```
 
-起動後、`http://localhost:8080/` を開きます。
+起動後、ブラウザで表示を確認します。
 
 ## 変更する場所
 
 - 文章: 各HTMLファイルを直接編集します。
 - 収益、目標、進捗: `assets/js/site-config.js` とトップページの表示文言を更新します。
 - XのURL: `assets/js/site-config.js` の `X_URL` を変更します。
-- 問い合わせフォーム: `assets/js/site-config.js` の `CONTACT_FORM_URL` をGoogleフォームURLへ変更します。
+- 問い合わせフォーム: 確定後に `assets/js/site-config.js` の `CONTACT_FORM_URL` へ正式URLを設定します。未設定時は準備中表示です。
 - 店舗名やURL: `assets/js/site-config.js` の `restaurant` を変更し、必要に応じて記事本文へ反映します。
 
 ## Cloudflare Pagesへの公開
@@ -42,9 +42,9 @@ python3 -m http.server 8080
 4. ビルドコマンドは空欄、公開ディレクトリはルートを指定します。
 5. 初回デプロイ後、表示とリンクを確認します。
 
-## 独自ドメイン
+## 公開URL
 
-公開URLが決まったら、`assets/js/site-config.js` の `SITE_URL`、各HTMLのcanonical、OGP URL、`sitemap.xml`、`robots.txt` を実URLへ変更します。
+正式URLは `https://simken-ai-income-line.pages.dev/` です。`SITE_URL`、各HTMLのcanonical、OGP URL、`sitemap.xml`、`robots.txt` はこのURLに統一します。
 
 ## 記事を追加する方法
 

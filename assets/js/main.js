@@ -29,7 +29,7 @@
   }
 
   document.querySelectorAll("[data-contact-link]").forEach((node) => {
-    if (typeof CONTACT_FORM_URL === "string" && CONTACT_FORM_URL && CONTACT_FORM_URL !== "REPLACE_WITH_GOOGLE_FORM_URL") {
+    if (typeof CONTACT_FORM_URL === "string" && CONTACT_FORM_URL) {
       node.setAttribute("href", CONTACT_FORM_URL);
       node.textContent = "お問い合わせフォームを開く";
       node.removeAttribute("aria-disabled");
@@ -43,9 +43,13 @@
   document.querySelectorAll("[data-x-link]").forEach((node) => {
     if (typeof X_URL === "string" && X_URL) {
       node.setAttribute("href", X_URL);
+      node.setAttribute("target", "_blank");
+      node.setAttribute("rel", "noopener noreferrer");
       node.textContent = "Xを見る";
     } else {
       node.removeAttribute("href");
+      node.removeAttribute("target");
+      node.removeAttribute("rel");
       node.textContent = "Xは公開準備中";
     }
   });
