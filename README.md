@@ -31,7 +31,7 @@ python3 -m http.server 8080
 - 文章: 各HTMLファイルを直接編集します。
 - 収益、目標、進捗: `assets/js/site-config.js` とトップページの表示文言を更新します。
 - XのURL: `assets/js/site-config.js` の `X_URL` を変更します。
-- 問い合わせフォーム: 確定後に `assets/js/site-config.js` の `CONTACT_FORM_URL` へ正式URLを設定します。未設定時は準備中表示です。
+- 問い合わせフォーム: `assets/js/site-config.js` の `CONTACT_FORM_URL` に正式なGoogleフォームURLを設定しています。
 - 店舗名やURL: `assets/js/site-config.js` の `restaurant` を変更し、必要に応じて記事本文へ反映します。
 
 ## Cloudflare Pagesへの公開

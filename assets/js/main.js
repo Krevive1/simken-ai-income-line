@@ -31,12 +31,17 @@
   document.querySelectorAll("[data-contact-link]").forEach((node) => {
     if (typeof CONTACT_FORM_URL === "string" && CONTACT_FORM_URL) {
       node.setAttribute("href", CONTACT_FORM_URL);
+      node.setAttribute("target", "_blank");
+      node.setAttribute("rel", "noopener noreferrer");
       node.textContent = "お問い合わせフォームを開く";
       node.removeAttribute("aria-disabled");
+      node.classList.remove("disabled");
     } else {
       node.removeAttribute("href");
+      node.removeAttribute("target");
+      node.removeAttribute("rel");
       node.setAttribute("aria-disabled", "true");
-      node.textContent = "お問い合わせフォームは現在準備中です";
+      node.textContent = "お問い合わせフォームを開く";
     }
   });
 

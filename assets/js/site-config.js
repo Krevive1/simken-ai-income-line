@@ -1,5 +1,5 @@
 const SITE_URL = "https://simken-ai-income-line.pages.dev";
-const CONTACT_FORM_URL = "";
+const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdvGGm2TsaYvyAoDuhn4XqX0iF3kOajJVIHZ9kdR6sbelWrmw/viewform";
 const X_URL = "https://x.com/cimaciwc";
 
 const SIMKEN_CONFIG = {
