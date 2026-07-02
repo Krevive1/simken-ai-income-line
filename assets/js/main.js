@@ -128,17 +128,10 @@
       ".dashboard-panel",
       ".page-main .section-head",
       ".grid > .card",
+      ".article-list > .card",
       ".progress-grid > .card",
       ".status-list",
-      ".filters",
-      ".article-body > .breadcrumb",
-      ".article-body > .badge",
-      ".article-body > h1",
-      ".article-body > .meta",
-      ".article-body > .notice",
-      ".evidence-section",
-      ".toc-card",
-      ".notice"
+      ".filters"
     ];
 
     const revealNodes = Array.from(document.querySelectorAll(revealSelectors.join(",")));
@@ -185,6 +178,80 @@
     }, { threshold: 0.16 });
 
     document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+  };
+
+  const setupArticleToc = () => {
+    const article = document.querySelector(".article-body");
+    if (!article) return;
+
+    document.querySelectorAll(".toc-mobile").forEach((details) => {
+      const summary = details.querySelector("summary");
+      if (!summary) return;
+
+      const updateSummary = () => {
+        const isOpen = details.open;
+        summary.textContent = isOpen ? "目次を閉じる" : "目次を開く";
+        summary.setAttribute("aria-expanded", String(isOpen));
+      };
+
+      if (window.matchMedia("(max-width: 1099px)").matches) {
+        details.open = false;
+      }
+
+      updateSummary();
+      details.addEventListener("toggle", updateSummary);
+    });
+
+    const sections = Array.from(article.querySelectorAll("h2[id], h3[id]"));
+    const tocLinks = Array.from(document.querySelectorAll(".article-toc a[href^='#']"));
+    if (!sections.length || !tocLinks.length) return;
+
+    const linksById = new Map();
+    tocLinks.forEach((link) => {
+      const id = decodeURIComponent(link.getAttribute("href").slice(1));
+      if (!linksById.has(id)) linksById.set(id, []);
+      linksById.get(id).push(link);
+    });
+
+    const setActive = (id) => {
+      tocLinks.forEach((link) => link.classList.remove("is-active"));
+      (linksById.get(id) || []).forEach((link) => link.classList.add("is-active"));
+    };
+
+    if (window.location.hash) {
+      setActive(decodeURIComponent(window.location.hash.slice(1)));
+    } else {
+      setActive(sections[0].id);
+    }
+
+    let ticking = false;
+    const updateActiveFromScroll = () => {
+      const current = sections.reduce((active, section) => {
+        return section.getBoundingClientRect().top <= 130 ? section : active;
+      }, sections[0]);
+      setActive(current.id);
+      ticking = false;
+    };
+
+    window.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateActiveFromScroll);
+    }, { passive: true });
+
+    if (!("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible[0]) setActive(visible[0].target.id);
+    }, { rootMargin: "-96px 0px -58% 0px", threshold: 0.01 });
+
+    sections.forEach((section) => observer.observe(section));
+    window.addEventListener("hashchange", () => {
+      if (window.location.hash) setActive(decodeURIComponent(window.location.hash.slice(1)));
+    });
   };
 
   const setupProgress = () => {
@@ -286,6 +353,7 @@
   try {
     setupHeroAnimation();
     setupRevealAnimations();
+    setupArticleToc();
     setupProgress();
     setupBackToTop();
   } catch (error) {
