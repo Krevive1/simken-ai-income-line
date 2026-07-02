@@ -318,6 +318,75 @@ section, .page-main { padding: 56px 0; }
 .article-body h2 { margin-top: 38px; }
 .toc-card { position: sticky; top: 88px; }
 .notice { border-left: 4px solid var(--amber); background: #fff8e6; padding: 16px; border-radius: 0 var(--radius) var(--radius) 0; }
+.affiliate-disclosure {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(245,159,24,.34);
+  border-radius: var(--radius);
+  background: #fffaf0;
+  color: var(--ink);
+}
+.affiliate-disclosure--article { margin: 14px 0 18px; }
+.affiliate-disclosure p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--muted); }
+.affiliate-product {
+  margin: 24px 0 34px;
+  padding: clamp(16px, 3vw, 22px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f8fafc;
+  box-shadow: 0 8px 24px rgba(16,24,39,.06);
+}
+.affiliate-product__label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 26px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--amber);
+  color: #17120a;
+  font-size: 12px;
+  font-weight: 900;
+}
+.affiliate-product__body,
+.affiliate-product__description { display: grid; gap: 14px; }
+.affiliate-product__link a {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--navy);
+  font-weight: 800;
+  line-height: 1.55;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(16,24,39,.06);
+}
+.affiliate-product__link a:hover,
+.affiliate-product__link a:focus-visible {
+  border-color: rgba(245,159,24,.6);
+  box-shadow: 0 12px 26px rgba(16,24,39,.1);
+}
+.affiliate-product__link a img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius);
+  background: #fff;
+}
+.affiliate-product__link a br { display: none; }
+.affiliate-product__link > img[width="1"] {
+  display: block;
+  width: 1px;
+  height: 1px;
+}
 .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
 .filters button { min-height: 42px; border: 1px solid var(--line); border-radius: 999px; background: #fff; padding: 8px 14px; font-weight: 700; }
 .filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
@@ -439,6 +508,8 @@ section, .page-main { padding: 56px 0; }
   .progress-grid { grid-template-columns: 1fr; }
   .line-item { grid-template-columns: 72px minmax(0, 1fr); gap: 8px 10px; }
   .line-status { grid-column: 2; justify-self: start; }
+  .affiliate-product__link a { grid-template-columns: 1fr; text-align: left; }
+  .affiliate-product__link a img { justify-self: start; }
   .back-to-top { right: 12px; bottom: 12px; width: 42px; height: 42px; }
 }
 
