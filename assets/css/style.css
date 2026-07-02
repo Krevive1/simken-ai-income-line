@@ -352,6 +352,7 @@ section, .page-main { padding: 56px 0; }
 }
 .affiliate-product__body,
 .affiliate-product__description { display: grid; gap: 14px; }
+.affiliate-product__heading { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .affiliate-product__title {
   margin: 0;
   color: var(--navy);
@@ -359,6 +360,19 @@ section, .page-main { padding: 56px 0; }
   font-weight: 900;
   line-height: 1.45;
 }
+.affiliate-product__used-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 26px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #e7eefc;
+  color: #24477f;
+  font-size: 12px;
+  font-weight: 900;
+}
+.affiliate-product--used { border-color: rgba(36,71,127,.2); background: #f7faff; }
 .affiliate-product__link a {
   display: grid;
   grid-template-columns: 128px minmax(0, 1fr);
