@@ -343,6 +343,13 @@ section, .page-main { padding: 56px 0; }
 .article-card a {
   overflow-wrap: anywhere;
 }
+.article-card--equipment h2 {
+  font-size: clamp(21px, 1.7vw, 24px);
+  line-height: 1.4;
+}
+.article-card--equipment .meta {
+  margin: 0 0 8px;
+}
 .card-cover::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
 .evidence-badge {
   display: inline-flex;
