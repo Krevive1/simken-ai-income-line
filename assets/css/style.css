@@ -352,6 +352,13 @@ section, .page-main { padding: 56px 0; }
 }
 .affiliate-product__body,
 .affiliate-product__description { display: grid; gap: 14px; }
+.affiliate-product__title {
+  margin: 0;
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.45;
+}
 .affiliate-product__link a {
   display: grid;
   grid-template-columns: 128px minmax(0, 1fr);
