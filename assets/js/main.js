@@ -123,6 +123,9 @@
   const setupRevealAnimations = () => {
     const revealSelectors = [
       "main > section:not(.hero) .section-head",
+      ".feature-split",
+      ".showcase-grid > .card",
+      ".dashboard-panel",
       ".page-main .section-head",
       ".grid > .card",
       ".progress-grid > .card",
@@ -149,7 +152,7 @@
       if (related) related.classList.add("reveal");
     });
 
-    document.querySelectorAll(".grid, .progress-grid").forEach((group) => {
+    document.querySelectorAll(".grid, .progress-grid, .showcase-grid").forEach((group) => {
       Array.from(group.children).forEach((child, index) => {
         if (child.classList.contains("reveal")) setDelay(child, index, 80, 480);
       });
