@@ -18,8 +18,8 @@ const SIMKEN_CONFIG = {
     { label: "サイト設計", state: "完了" },
     { label: "サイト制作", state: "完了" },
     { label: "記事公開", state: "完了" },
-    { label: "もしも登録", state: "未完了" },
-    { label: "広告掲載", state: "未完了" },
+    { label: "もしも登録", state: "完了" },
+    { label: "広告掲載", state: "完了" },
     { label: "初報酬", state: "未達成" }
   ]
 };
