@@ -5,7 +5,7 @@ const X_URL = "https://x.com/cimaciwc";
 const SIMKEN_CONFIG = {
   authorName: "SIMけん",
   siteName: "SIMけんのAI収入ライン増設計画",
-  monthlyRevenue: 0,
+  monthlyRevenue: 429,
   monthlyGoal: 10000,
   appDownloads: "約30",
   restaurant: {
